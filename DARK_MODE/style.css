@@ -1,1 +1,16 @@
-﻿
+body {
+  background: #e85fc3;
+}
+body .container-text {
+  display: flex;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translateX(-50%) translateY(-50%);
+}
+body .container-text:hover div {
+  transform: rotateY(360deg);
+  transition: 0.9s;
+  background-color: #f00;
+  color: withe;
+}

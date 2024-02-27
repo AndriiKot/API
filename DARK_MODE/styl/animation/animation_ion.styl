@@ -1,0 +1,31 @@
+﻿animation_ion()
+    .box::before {
+      content: '';
+      position: absolute;
+      inset: -3px;
+      box-shadow: 0 0 0 20px #070c23;
+      z-index: -1;
+      animation: line-ion 4s ease infinite;
+    }
+    .box::after {
+      content: '';
+      position: absolute;
+      inset: -3px;
+      z-index: -1;
+      filter: blur(20px);
+      animation: line-ion 4s ease infinite;
+    }
+    .box:nth-child(2)::after,
+    .box:nth-child(2)::before {
+      animation: line-ion 4s ease infinite;
+    }
+    @keyframes line-ion {
+      from {
+        background: linear-gradient(45deg, #00ccff, #0e1538, #0e1538, #d400d4);
+      }
+      to {
+        background: linear-gradient(-45deg, #42db14, #0e1538, #0e1538, #42db14);
+      }
+    }
+    
+    

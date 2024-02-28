@@ -33,7 +33,6 @@ const longitude = response.longitude();
 const current = response.current()!;
 const minutely15 = response.minutely15()!;
 const hourly = response.hourly()!;
-const daily = response.daily()!;
 
 // Note: The order of weather variables in the URL query and the indices below need to match!
 const weatherData = {
@@ -62,17 +61,7 @@ const weatherData = {
 		temperature2m: hourly.variables(0)!.valuesArray()!,
 		apparentTemperature: hourly.variables(1)!.valuesArray()!,
 		isDay: hourly.variables(2)!.valuesArray()!,
-	},
-	daily: {
-		time: range(Number(daily.time()), Number(daily.timeEnd()), daily.interval()).map(
-			(t) => new Date((t + utcOffsetSeconds) * 1000)
-		),
-		weatherCode: daily.variables(0)!.valuesArray()!,
-		temperature2mMax: daily.variables(1)!.valuesArray()!,
-		temperature2mMin: daily.variables(2)!.valuesArray()!,
-		sunrise: daily.variables(3)!.valuesArray()!,
-		sunset: daily.variables(4)!.valuesArray()!,
-	},
+	}
 
 };
 
@@ -91,15 +80,5 @@ for (let i = 0; i < weatherData.hourly.time.length; i++) {
 		weatherData.hourly.temperature2m[i],
 		weatherData.hourly.apparentTemperature[i],
 		weatherData.hourly.isDay[i]
-	);
-}
-for (let i = 0; i < weatherData.daily.time.length; i++) {
-	console.log(
-		weatherData.daily.time[i].toISOString(),
-		weatherData.daily.weatherCode[i],
-		weatherData.daily.temperature2mMax[i],
-		weatherData.daily.temperature2mMin[i],
-		weatherData.daily.sunrise[i],
-		weatherData.daily.sunset[i]
 	);
 }

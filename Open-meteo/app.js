@@ -10,6 +10,7 @@ const url = "https://api.open-meteo.com/v1/forecast";
 
 fetch(url)
   .then((res) => {
+	console.dir(res)
     return res.json;
   })
   .then((data) => {
@@ -19,16 +20,17 @@ fetch(url)
     console.log("Error!");
   });
 
-// const responses = await fetchWeatherApi(url, params);
+const responses = await fetchWeatherApi(url, params);
 
-// console.log(responses);
+console.dir(responses);
 
 // Helper function to form time ranges
 // const range = (start, stop, step) =>
 // 	Array.from({ length: (stop - start) / step }, (_, i) => start + i * step);
 
 // // Process first location. Add a for-loop for multiple locations or weather models
-// const response = responses[0];
+const response = responses[0];
+console.log(response)
 
 // // Attributes for timezone and location
 // const utcOffsetSeconds = response.utcOffsetSeconds();

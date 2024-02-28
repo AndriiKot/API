@@ -7,6 +7,6 @@
         "./dist/**/*"
     ],
     "files": [
-        "./app1.ts"
+        "./app.ts"
     ]
 }

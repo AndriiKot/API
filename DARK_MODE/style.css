@@ -145,24 +145,26 @@ summary {
   display: list-item;
 }
 body {
+  background-color: #0e1538;
   font-family: "PT Sans Caption", sans-serif;
   font-weight: 400;
   font-style: normal;
   color: #d9cdcd;
   text-shadow: -3px 0px 19px #070c23, 0 0 1em #0cf;
+  gap: 200px;
 }
 body .box::before {
   content: '';
   position: absolute;
-  inset: -3px;
-  box-shadow: 0 0 0 20px #070c23;
+  inset: -5px;
+  box-shadow: 0 0 0 15px #070c23;
   z-index: -1;
   animation: line-ion 4s ease infinite;
 }
 body .box::after {
   content: '';
   position: absolute;
-  inset: -3px;
+  inset: -5px;
   z-index: -1;
   filter: blur(20px);
   animation: line-ion 4s ease infinite;

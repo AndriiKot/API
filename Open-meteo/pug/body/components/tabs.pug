@@ -1,0 +1,31 @@
+﻿
+mixin tabs(classWrapper = '',int_tabs = 1)
+    div(class= 'wrapper__' + classWrapper)
+        ul(class= 'tab-list__' + classWrapper)              
+            - var n = 0;
+            while n++ < int_tabs
+                - var className = 'tab-item__' + classWrapper + "__" + n
+                    if n == 1
+                        li(class= className + ' is-active') #{n}
+                    else 
+                        li(class= className) #{n}
+        ul(class= 'content-list__' + classWrapper)              
+            - var n = 0;
+            while n++ < int_tabs
+                - var className = 'content-item__' + classWrapper + "__" + n
+                    if n == 1
+                        li(class= className + ' is-active') Content #{n}
+                    else 
+                        li(class= className) Content #{n}
+
+
+
+        //- 	<ul class="content-list">
+        //- 		<li class="content-item is-active">Content 1</li>
+        //- 		<li class="content-item">Content 2</li>
+        //- 		<li class="content-item">Content 3</li>
+        //- 		<li class="content-item">Content 4</li>
+        //- 		<li class="content-item">Content 5</li>
+        //- 	</ul>
+        //- </div>
+

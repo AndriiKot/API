@@ -1,5 +1,6 @@
-﻿include ./components/container_text__split_string.pug
+﻿include ./components/tabs.pug
+
 
 mixin body-constructor()
     body
-        h1 Test pug !!!            
+        +tabs('app-open-meteo',3)   

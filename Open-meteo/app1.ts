@@ -33,7 +33,6 @@ const longitude = response.longitude();
 const current = response.current()!;
 const minutely15 = response.minutely15()!;
 const hourly = response.hourly()!;
-
 // Note: The order of weather variables in the URL query and the indices below need to match!
 const weatherData = {
 	current: {
@@ -66,19 +65,21 @@ const weatherData = {
 };
 
 // `weatherData` now contains a simple structure with arrays for datetime and weather data
-for (let i = 0; i < weatherData.minutely15.time.length; i++) {
-	console.log(
-		weatherData.minutely15.time[i].toISOString(),
-		weatherData.minutely15.temperature2m[i],
-		weatherData.minutely15.relativeHumidity2m[i],
-		weatherData.minutely15.apparentTemperature[i]
-	);
-}
-for (let i = 0; i < weatherData.hourly.time.length; i++) {
-	console.log(
-		weatherData.hourly.time[i].toISOString(),
-		weatherData.hourly.temperature2m[i],
-		weatherData.hourly.apparentTemperature[i],
-		weatherData.hourly.isDay[i]
-	);
-}
+console.log(weatherData.current)
+
+// for (let i = 0; i < weatherData.minutely15.time.length; i++) {
+// 	console.log(
+// 		weatherData.minutely15.time[i].toISOString(),
+// 		weatherData.minutely15.temperature2m[i],
+// 		weatherData.minutely15.relativeHumidity2m[i],
+// 		weatherData.minutely15.apparentTemperature[i]
+// 	);
+// }
+// for (let i = 0; i < weatherData.hourly.time.length; i++) {
+// 	console.log(
+// 		weatherData.hourly.time[i].toISOString(),
+// 		weatherData.hourly.temperature2m[i],
+// 		weatherData.hourly.apparentTemperature[i],
+// 		weatherData.hourly.isDay[i]
+// 	);
+// }

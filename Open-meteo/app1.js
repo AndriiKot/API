@@ -53,9 +53,20 @@ const weatherData = {
     }
 };
 // `weatherData` now contains a simple structure with arrays for datetime and weather data
-for (let i = 0; i < weatherData.minutely15.time.length; i++) {
-    console.log(weatherData.minutely15.time[i].toISOString(), weatherData.minutely15.temperature2m[i], weatherData.minutely15.relativeHumidity2m[i], weatherData.minutely15.apparentTemperature[i]);
-}
-for (let i = 0; i < weatherData.hourly.time.length; i++) {
-    console.log(weatherData.hourly.time[i].toISOString(), weatherData.hourly.temperature2m[i], weatherData.hourly.apparentTemperature[i], weatherData.hourly.isDay[i]);
-}
+console.log(weatherData.current);
+// for (let i = 0; i < weatherData.minutely15.time.length; i++) {
+// 	console.log(
+// 		weatherData.minutely15.time[i].toISOString(),
+// 		weatherData.minutely15.temperature2m[i],
+// 		weatherData.minutely15.relativeHumidity2m[i],
+// 		weatherData.minutely15.apparentTemperature[i]
+// 	);
+// }
+// for (let i = 0; i < weatherData.hourly.time.length; i++) {
+// 	console.log(
+// 		weatherData.hourly.time[i].toISOString(),
+// 		weatherData.hourly.temperature2m[i],
+// 		weatherData.hourly.apparentTemperature[i],
+// 		weatherData.hourly.isDay[i]
+// 	);
+// }

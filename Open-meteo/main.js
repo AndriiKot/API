@@ -1,3 +1,3 @@
-﻿import { weatherData } from './weather_data.js'
+﻿import { weatherData } from './weather_data.js';
 
-console.log(weatherData.current)
+console.log(weatherData.current);

@@ -53,7 +53,7 @@ const weatherData = {
     }
 };
 // `weatherData` now contains a simple structure with arrays for datetime and weather data
-console.log(weatherData.current);
+// console.log(weatherData.current)
 // for (let i = 0; i < weatherData.minutely15.time.length; i++) {
 // 	console.log(
 // 		weatherData.minutely15.time[i].toISOString(),
@@ -70,3 +70,4 @@ console.log(weatherData.current);
 // 		weatherData.hourly.isDay[i]
 // 	);
 // }
+export { weatherData };

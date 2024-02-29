@@ -132,6 +132,8 @@ dfn[title] {
   cursor: help;
 }
 body {
+  display: grid;
+  justify-content: center;
   font-family: "PT Sans Caption", sans-serif;
   font-weight: 400;
   font-style: normal;
@@ -145,7 +147,7 @@ li {
   list-style-type: none;
 }
 .wrapper__app-open-meteo {
-  width: 400px;
+  width: 90vw;
   display: flex;
   flex-wrap: wrap;
   gap: 10px 0;
@@ -154,8 +156,10 @@ li {
   text-align: center;
 }
 .tab-list__app-open-meteo {
-  display: flex;
-  gap: 10px;
+  display: grid;
+  justify-content: center;
+  grid-template-columns: repeat(3, 25%);
+  gap: 3%;
   width: 100%;
   cursor: pointer;
 }
@@ -163,24 +167,23 @@ li {
 .tab-item__app-open-meteo__2,
 .tab-item__app-open-meteo__3 {
   flex-grow: 1;
-  width: 50px;
-  padding: 5px;
+  width: 100%;
+  padding: 2%;
   background: #808080;
   transition: width 0.5s;
 }
 .tab-list__app-open-meteo .is-active {
-  width: 80px;
   background: #0ff;
 }
 .content-list__app-open-meteo {
-  width: 100%;
+  width: 100;
   border: 2px solid #000;
 }
 .content-item__app-open-meteo__1,
 .content-item__app-open-meteo__2,
 .content-item__app-open-meteo__3 {
   display: none;
-  height: 200px;
+  height: 80dvh;
   line-height: 200px;
   background: #808080;
 }

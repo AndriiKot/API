@@ -14,18 +14,7 @@ mixin tabs(classWrapper = '',int_tabs = 1)
             while n++ < int_tabs
                 - var className = 'content-item__' + classWrapper + "__" + n
                     if n == 1
-                        li(class= className + ' is-active') Content #{n}
+                        li(class= className + ' is-active') 
+                            div(class= className + '__wrapper__current_content')
                     else 
                         li(class= className) Content #{n}
-
-
-
-        //- 	<ul class="content-list">
-        //- 		<li class="content-item is-active">Content 1</li>
-        //- 		<li class="content-item">Content 2</li>
-        //- 		<li class="content-item">Content 3</li>
-        //- 		<li class="content-item">Content 4</li>
-        //- 		<li class="content-item">Content 5</li>
-        //- 	</ul>
-        //- </div>
-

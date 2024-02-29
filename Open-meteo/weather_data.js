@@ -70,4 +70,7 @@ const weatherData = {
 // 		weatherData.hourly.isDay[i]
 // 	);
 // }
-export { weatherData };
+const current_api = weatherData.current;
+const minutely15_api = weatherData.minutely15;
+const hourly_api = weatherData.hourly;
+export { current_api, minutely15_api, hourly_api };

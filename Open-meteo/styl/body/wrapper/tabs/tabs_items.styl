@@ -4,6 +4,18 @@
     flex-grow 1
     width 100%
     padding 2%
-    background gray
     transition width 0.5s
+    border 1px solid black
+
+.tab-item__app-open-meteo__1:is(.is-active)
+        background content_current
+
+.tab-item__app-open-meteo__2:is(.is-active)
+    background-color content_minutely
+
+.tab-item__app-open-meteo__3:is(.is-active)
+    background-color content_hourly
+
+
+
 

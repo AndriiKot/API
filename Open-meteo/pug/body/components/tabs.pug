@@ -1,14 +1,14 @@
 ﻿
-mixin tabs(classWrapper = '',int_tabs = 1)
+mixin tabs(classWrapper = '',int_tabs = 1, titlesTabs = ['1','2','3'])
     div(class= 'wrapper__' + classWrapper)
         ul(class= 'tab-list__' + classWrapper)              
             - var n = 0;
             while n++ < int_tabs
                 - var className = 'tab-item__' + classWrapper + "__" + n
                     if n == 1
-                        li(class= className + ' is-active') #{n}
+                        li(class= className + ' is-active')= titlesTabs[n-1]
                     else 
-                        li(class= className) #{n}
+                        li(class= className)= titlesTabs[n-1]
         ul(class= 'content-list__' + classWrapper)              
             - var n = 0;
             while n++ < int_tabs
@@ -17,4 +17,4 @@ mixin tabs(classWrapper = '',int_tabs = 1)
                         li(class= className + ' is-active') 
                             div(class= className + '__wrapper__current_content')
                     else 
-                        li(class= className) Content #{n}
+                        li(class= className) 

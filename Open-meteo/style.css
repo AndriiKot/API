@@ -157,7 +157,7 @@ li {
 }
 .tab-list__app-open-meteo {
   display: grid;
-  justify-content: center;
+  justify-content: space-evenly;
   grid-template-columns: repeat(3, 25%);
   gap: 3%;
   width: 100%;
@@ -176,7 +176,7 @@ li {
   background: #0ff;
 }
 .content-list__app-open-meteo {
-  width: 100;
+  width: 100%;
   border: 2px solid #000;
 }
 .content-item__app-open-meteo__1,

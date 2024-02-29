@@ -1,6 +1,6 @@
-﻿import { minutely15_api } from "../weather_data.js";
+﻿import { minutely15_api } from '../weather_data.js';
 
-const inutely = document.querySelector(".content-item__app-open-meteo__2");
+const inutely = document.querySelector('.content-item__app-open-meteo__2');
 
 
 inutely.innerHTML += `

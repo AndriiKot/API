@@ -1,7 +1,7 @@
-﻿import { current_api } from "../weather_data.js";
+﻿import { current_api } from '../weather_data.js';
 
 const current = document.querySelector(
-  ".content-item__app-open-meteo__1__wrapper__current_content"
+  '.content-item__app-open-meteo__1__wrapper__current_content'
 );
 
 current.innerHTML += `

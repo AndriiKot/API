@@ -1,20 +1,23 @@
 ﻿@import './animation/*.styl'
 @import './mixins/*.styl'
 @import './variables/*.styl'
+@import './buttons/*.styl'
 
 
 normalize-css()
-
 body 
+    body-font()
     position-center()
+    overflow hidden
     min-height: 100vh;
-    background-color: #523634;
+    background-color backgound-dark_color
     color text-dark_color
     animation_ion()
-    body-font()
-   .box
+    .btn__switch-mode
+        buttons_style()
+    .box
         position: relative;
-        background-color: #523634;
+        background-color backgound-dark_color
         width 70%
         padding 10px 
     .box__container-text
@@ -26,4 +29,4 @@ body
         .latter
             font-size 3rem;
     .some-text__lorem-ipsum
-       text-align center
+        text-align center

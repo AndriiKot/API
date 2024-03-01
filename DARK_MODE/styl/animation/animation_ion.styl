@@ -1,9 +1,11 @@
-﻿animation_ion()
+﻿@import '../variables/*.styl'
+
+animation_ion()
     .box::before {
       content: '';
       position: absolute;
       inset: -5px;
-      box-shadow: 0 0 0 15px #070c23;
+      box-shadow: 0 0 0 15px frame-dark_border_color;
       z-index: -1;
       animation: line-ion 4s ease infinite;
     }
@@ -21,11 +23,13 @@
     }
     @keyframes line-ion {
       from {
-        background: linear-gradient(45deg, #00ccff, #0e1538, #0e1538, #d400d4);
+        background: linear-gradient(45deg, ion-dark_color-1, frame-dark_border_color, frame-dark_border_color, ion-dark_color-1);
       }
       to {
-        background: linear-gradient(-45deg, #42db14, #0e1538, #0e1538, #42db14);
+        background: linear-gradient(-45deg, ion-dakr_color-2, frame-dark_border_color, frame-dark_border_color, ion-dakr_color-2);
       }
     }
+
+  
     
     

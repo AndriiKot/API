@@ -145,19 +145,21 @@ summary {
   display: list-item;
 }
 body {
-  background-color: #0e1538;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background-color: #523634;
+  color: #fcebcc;
   font-family: "PT Sans Caption", sans-serif;
   font-weight: 400;
   font-style: normal;
-  color: #d9cdcd;
-  text-shadow: -3px 0px 19px #070c23, 0 0 1em #0cf;
-  gap: 200px;
 }
 body .box::before {
   content: '';
   position: absolute;
   inset: -5px;
-  box-shadow: 0 0 0 15px #070c23;
+  box-shadow: 0 0 0 15px #301b28;
   z-index: -1;
   animation: line-ion 4s ease infinite;
 }
@@ -175,42 +177,41 @@ body .box:nth-child(2)::before {
 }
 @-moz-keyframes line-ion {
   from {
-    background: linear-gradient(45deg, #0cf, #0e1538, #0e1538, #d400d4);
+    background: linear-gradient(45deg, #ddc5a2, #301b28, #301b28, #ddc5a2);
   }
   to {
-    background: linear-gradient(-45deg, #42db14, #0e1538, #0e1538, #42db14);
+    background: linear-gradient(-45deg, #f0d6ab, #301b28, #301b28, #f0d6ab);
   }
 }
 @-webkit-keyframes line-ion {
   from {
-    background: linear-gradient(45deg, #0cf, #0e1538, #0e1538, #d400d4);
+    background: linear-gradient(45deg, #ddc5a2, #301b28, #301b28, #ddc5a2);
   }
   to {
-    background: linear-gradient(-45deg, #42db14, #0e1538, #0e1538, #42db14);
+    background: linear-gradient(-45deg, #f0d6ab, #301b28, #301b28, #f0d6ab);
   }
 }
 @-o-keyframes line-ion {
   from {
-    background: linear-gradient(45deg, #0cf, #0e1538, #0e1538, #d400d4);
+    background: linear-gradient(45deg, #ddc5a2, #301b28, #301b28, #ddc5a2);
   }
   to {
-    background: linear-gradient(-45deg, #42db14, #0e1538, #0e1538, #42db14);
+    background: linear-gradient(-45deg, #f0d6ab, #301b28, #301b28, #f0d6ab);
   }
 }
 @keyframes line-ion {
   from {
-    background: linear-gradient(45deg, #0cf, #0e1538, #0e1538, #d400d4);
+    background: linear-gradient(45deg, #ddc5a2, #301b28, #301b28, #ddc5a2);
   }
   to {
-    background: linear-gradient(-45deg, #42db14, #0e1538, #0e1538, #42db14);
+    background: linear-gradient(-45deg, #f0d6ab, #301b28, #301b28, #f0d6ab);
   }
 }
 .box {
-  position: absolute;
-  left: 50%;
-  top: 50%;
-  transform: translateX(-50%) translateY(-50%);
-  text-align: center;
+  position: relative;
+  background-color: #523634;
+  width: 70%;
+  padding: 10px;
 }
 .box__container-text {
   font-weight: 700;
@@ -220,8 +221,6 @@ body .box:nth-child(2)::before {
 .box__container-text:hover div {
   transform: rotateY(360deg);
   transition: 0.9s;
-  background-color: #f00;
-  color: withe;
 }
 .box__container-text:hover div:nth-child(1) {
   transition-delay: 0.05s;
@@ -253,6 +252,9 @@ body .box:nth-child(2)::before {
 .box__container-text:hover div:nth-child(10) {
   transition-delay: 0.5s;
 }
-.box__container-text div {
-  font-size: 3.5rem;
+.box__container-text .latter {
+  font-size: 3rem;
+}
+.some-text__lorem-ipsum {
+  text-align: center;
 }

@@ -2,7 +2,7 @@
     div(class= classNameContainer + '__container-text')
         each chr in text.split('')
             if chr == ' ' && nowrapText
-                div(style='visibility: hidden;') X
+                div(class="latter",style='visibility: hidden;') X
             else 
-               div #{chr}
+               div(class="latter") #{chr}
 

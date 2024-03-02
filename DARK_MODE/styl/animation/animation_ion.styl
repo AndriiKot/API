@@ -5,7 +5,7 @@ animation_ion()
       content: '';
       position: absolute;
       inset: -5px;
-      box-shadow: 0 0 0 15px frame-dark_border_color;
+      box-shadow: 0 0 0 15px var(--color-border);
       z-index: -1;
       animation: line-ion 4s ease infinite;
     }
@@ -23,10 +23,10 @@ animation_ion()
     }
     @keyframes line-ion {
       from {
-        background: linear-gradient(45deg, ion-dark_color-1, frame-dark_border_color, frame-dark_border_color, ion-dark_color-1);
+        background: linear-gradient(45deg, ion-dark_color-1, var(--color-border), var(--color-border), ion-dark_color-1);
       }
       to {
-        background: linear-gradient(-45deg, ion-dakr_color-2, frame-dark_border_color, frame-dark_border_color, ion-dakr_color-2);
+        background: linear-gradient(-45deg, ion-dakr_color-2, var(--color-border), var(--color-border), ion-dakr_color-2);
       }
     }
 

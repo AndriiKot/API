@@ -3,21 +3,30 @@
 @import './variables/*.styl'
 @import './buttons/*.styl'
 
+:root
+    --color-background #FCEBCC
+    --color-border #523634
+    --color-text #301b28
 
+.dark-style
+    --color-background #523634
+    --color-border #301b28
+    --color-text #FCEBCC
+    
 normalize-css()
 body 
     body-font()
     position-center()
     overflow hidden
     min-height: 100vh;
-    background-color backgound-dark_color
-    color text-dark_color
+    background-color var(--color-background)
+    color var(--color-text)
     animation_ion()
     .btn__switch-mode
         buttons_style()
     .box
         position: relative;
-        background-color backgound-dark_color
+        background-color var(--color-background)
         width 70%
         padding 10px 
     .box__container-text__dark, .box__container-text__light

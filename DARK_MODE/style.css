@@ -1,3 +1,13 @@
+:root {
+  --color-background: #fcebcc;
+  --color-border: #523634;
+  --color-text: #301b28;
+}
+.dark-style {
+  --color-background: #523634;
+  --color-border: #301b28;
+  --color-text: #fcebcc;
+}
 html {
   -webkit-text-size-adjust: 100%;
   line-height: 1.15;
@@ -153,14 +163,14 @@ body {
   align-items: center;
   overflow: hidden;
   min-height: 100vh;
-  background-color: #523634;
-  color: #fcebcc;
+  background-color: var(--color-background);
+  color: var(--color-text);
 }
 body .box::before {
   content: '';
   position: absolute;
   inset: -5px;
-  box-shadow: 0 0 0 15px #301b28;
+  box-shadow: 0 0 0 15px var(--color-border);
   z-index: -1;
   animation: line-ion 4s ease infinite;
 }
@@ -178,34 +188,34 @@ body .box:nth-child(2)::before {
 }
 @-moz-keyframes line-ion {
   from {
-    background: linear-gradient(45deg, #ddc5a2, #301b28, #301b28, #ddc5a2);
+    background: linear-gradient(45deg, #ddc5a2, var(--color-border), var(--color-border), #ddc5a2);
   }
   to {
-    background: linear-gradient(-45deg, #f0d6ab, #301b28, #301b28, #f0d6ab);
+    background: linear-gradient(-45deg, #f0d6ab, var(--color-border), var(--color-border), #f0d6ab);
   }
 }
 @-webkit-keyframes line-ion {
   from {
-    background: linear-gradient(45deg, #ddc5a2, #301b28, #301b28, #ddc5a2);
+    background: linear-gradient(45deg, #ddc5a2, var(--color-border), var(--color-border), #ddc5a2);
   }
   to {
-    background: linear-gradient(-45deg, #f0d6ab, #301b28, #301b28, #f0d6ab);
+    background: linear-gradient(-45deg, #f0d6ab, var(--color-border), var(--color-border), #f0d6ab);
   }
 }
 @-o-keyframes line-ion {
   from {
-    background: linear-gradient(45deg, #ddc5a2, #301b28, #301b28, #ddc5a2);
+    background: linear-gradient(45deg, #ddc5a2, var(--color-border), var(--color-border), #ddc5a2);
   }
   to {
-    background: linear-gradient(-45deg, #f0d6ab, #301b28, #301b28, #f0d6ab);
+    background: linear-gradient(-45deg, #f0d6ab, var(--color-border), var(--color-border), #f0d6ab);
   }
 }
 @keyframes line-ion {
   from {
-    background: linear-gradient(45deg, #ddc5a2, #301b28, #301b28, #ddc5a2);
+    background: linear-gradient(45deg, #ddc5a2, var(--color-border), var(--color-border), #ddc5a2);
   }
   to {
-    background: linear-gradient(-45deg, #f0d6ab, #301b28, #301b28, #f0d6ab);
+    background: linear-gradient(-45deg, #f0d6ab, var(--color-border), var(--color-border), #f0d6ab);
   }
 }
 body .btn__switch-mode {
@@ -213,6 +223,7 @@ body .btn__switch-mode {
   left: 98%;
   top: 3%;
   transform: translate(-100%);
+  min-width: 110px;
   color: inherit;
   background-color: inherit;
   cursor: pointer;
@@ -222,11 +233,11 @@ body .btn__switch-mode {
   z-index: 100;
 }
 body .btn__switch-mode:hover {
-  box-shadow: inset 0 0 0 2px #301b28;
+  box-shadow: inset 0 0 0 2px var(--color-border);
 }
 body .box {
   position: relative;
-  background-color: #523634;
+  background-color: var(--color-background);
   width: 70%;
   padding: 10px;
 }

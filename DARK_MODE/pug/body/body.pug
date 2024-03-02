@@ -2,13 +2,14 @@
 
 mixin body-constructor()
     body
-        button(class='btn__switch-mode dark-mode') light 
+        button(class='btn__switch-mode') dark
         .box
-            +container-text__split-string('Dark Mode','dark')
-            +container-text__split-string('Light Mode','light',false)
+            .box_wrapper_container-text
+                +container-text__split-string('Dark Mode','dark',false)
+                +container-text__split-string('Light Mode','light',true)
             p(class="some-text__lorem-ipsum")
-                |Lorem ipsum dolor, sit amet consectetur adipisicing elit. 
-                |Magni impedit sapiente placeat porro voluptate rem, at enim 
-                |consequuntur maxime deserunt omnis iste recusandae vero vitae 
-                |ullam aperiam reprehenderit inventore eaque.
+                    |Lorem ipsum dolor, sit amet consectetur adipisicing elit. 
+                    |Magni impedit sapiente placeat porro voluptate rem, at enim 
+                    |consequuntur maxime deserunt omnis iste recusandae vero vitae 
+                    |ullam aperiam reprehenderit inventore eaque.
             

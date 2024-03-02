@@ -20,14 +20,16 @@ body
         background-color backgound-dark_color
         width 70%
         padding 10px 
-.box__container-text__dark
-    background-color: red
-    font-weight: 700;
-    display flex
-    justify-content center
-    transform-rotateY(360,0.9)
-    animation_transition_delay(10)
-    .latter
-        font-size 3rem;
-.some-text__lorem-ipsum
+    .box__container-text__dark, .box__container-text__light
+        display none
+        font-weight: 700;
+        justify-content center
+        transform-rotateY(360,0.9)
+        animation_transition_delay(10)
+    .box__container-text__dark:is(.active), 
+    .box__container-text__light:is(.active)
+        display flex
+        .latter
+            font-size 3rem;
+    .some-text__lorem-ipsum
         text-align center

@@ -2,6 +2,8 @@
   --color-background: #fcebcc;
   --color-border: #523634;
   --color-text: #301b28;
+  --color-ion-1: #ddc5a2;
+  --color-ion-2: #f0d6ab;
 }
 .dark-style {
   --color-background: #523634;
@@ -188,34 +190,34 @@ body .box:nth-child(2)::before {
 }
 @-moz-keyframes line-ion {
   from {
-    background: linear-gradient(45deg, #ddc5a2, var(--color-border), var(--color-border), #ddc5a2);
+    background: linear-gradient(45deg, var(--color-ion-1), var(--color-border), var(--color-border), var(--color-ion-1));
   }
   to {
-    background: linear-gradient(-45deg, #f0d6ab, var(--color-border), var(--color-border), #f0d6ab);
+    background: linear-gradient(-45deg, var(--color-ion-2), var(--color-border), var(--color-border), var(--color-ion-2));
   }
 }
 @-webkit-keyframes line-ion {
   from {
-    background: linear-gradient(45deg, #ddc5a2, var(--color-border), var(--color-border), #ddc5a2);
+    background: linear-gradient(45deg, var(--color-ion-1), var(--color-border), var(--color-border), var(--color-ion-1));
   }
   to {
-    background: linear-gradient(-45deg, #f0d6ab, var(--color-border), var(--color-border), #f0d6ab);
+    background: linear-gradient(-45deg, var(--color-ion-2), var(--color-border), var(--color-border), var(--color-ion-2));
   }
 }
 @-o-keyframes line-ion {
   from {
-    background: linear-gradient(45deg, #ddc5a2, var(--color-border), var(--color-border), #ddc5a2);
+    background: linear-gradient(45deg, var(--color-ion-1), var(--color-border), var(--color-border), var(--color-ion-1));
   }
   to {
-    background: linear-gradient(-45deg, #f0d6ab, var(--color-border), var(--color-border), #f0d6ab);
+    background: linear-gradient(-45deg, var(--color-ion-2), var(--color-border), var(--color-border), var(--color-ion-2));
   }
 }
 @keyframes line-ion {
   from {
-    background: linear-gradient(45deg, #ddc5a2, var(--color-border), var(--color-border), #ddc5a2);
+    background: linear-gradient(45deg, var(--color-ion-1), var(--color-border), var(--color-border), var(--color-ion-1));
   }
   to {
-    background: linear-gradient(-45deg, #f0d6ab, var(--color-border), var(--color-border), #f0d6ab);
+    background: linear-gradient(-45deg, var(--color-ion-2), var(--color-border), var(--color-border), var(--color-ion-2));
   }
 }
 body .btn__switch-mode {

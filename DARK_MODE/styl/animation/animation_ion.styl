@@ -1,25 +1,34 @@
 ﻿@import '../variables/*.styl'
 
-animation_ion()
-    .box::before {
+animation_ion(time = 4)
+    &::before {
       content: '';
       position: absolute;
       inset: -5px;
       box-shadow: 0 0 0 15px var(--color-border);
       z-index: -1;
-      animation: line-ion 4s ease infinite;
+      animation-name line-ion
+      animation-duration time s
+      animation-timing-function ease
+      animation-iteration-count infinite
     }
-    .box::after {
+    &::after {
       content: '';
       position: absolute;
       inset: -5px;
       z-index: -1;
       filter: blur(20px);
-      animation: line-ion 4s ease infinite;
+      animation-name line-ion
+      animation-duration time s
+      animation-timing-function ease
+      animation-iteration-count infinite
     }
-    .box:nth-child(2)::after,
-    .box:nth-child(2)::before {
-      animation: line-ion 4s ease infinite;
+    &:nth-child(2)::after,
+    &:nth-child(2)::before {
+      animation-name line-ion
+      animation-duration time s
+      animation-timing-function ease
+      animation-iteration-count infinite
     }
     @keyframes line-ion {
       from {

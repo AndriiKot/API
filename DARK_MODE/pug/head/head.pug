@@ -2,9 +2,9 @@
 
 mixin head-constructor(title,script,link_style)
        head
-            meta(charset="UTF-8")
-            meta(name="viewport",content="width=device-width, initial-scale=1.0")
-            +font()
-            link(rel="stylesheet", href= './' + link_style)
-            script(src='./'+ script + '.js', async='', defer='')
-            title #{title}
+          meta(charset="UTF-8")
+          meta(name="viewport",content="width=device-width, initial-scale=1.0")
+          +font()
+          link(rel="stylesheet", href= './' + link_style)
+          script(src='./'+ script + '.js', async='async', defer='defer')
+          title #{title}

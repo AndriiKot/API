@@ -1,8 +1,9 @@
 ﻿include ./components/container_text__split_string.pug
+include ./components/section_buttons.pug
 
 mixin body-constructor()
-    body
-        button(class='btn__switch-mode') dark
+    body(class="cool")
+        +buttons_section()
         .box
             .box_wrapper_container-text
                 +container-text__split-string('Dark Mode','dark',false)

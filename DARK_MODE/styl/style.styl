@@ -2,20 +2,33 @@
 @import './mixins/*.styl'
 @import './variables/*.styl'
 @import './buttons/*.styl'
+@import './section_buttons/*.styl'
 
-:root
+body:is(.warm)
     --color-background #FCEBCC
     --color-border #523634
     --color-text #301b28
     --color-ion-1 #ddc5a2
     --color-ion-2 #F0D6AB
 
-.dark-style
+.dark-style:is(.warm)
     --color-background #523634
     --color-border #301b28
     --color-text #FCEBCC
-    
-normalize-css()
+
+body:is(.cool)
+    --color-background #fff;
+    --color-border #3a5199
+    --color-text #000
+    --color-ion-1 #d5d6d2
+    --color-ion-2 #fff
+
+.dark-style:is(.cool)
+    --color-background #3a5199
+    --color-border #2f2e33
+    --color-text #ffffff
+
+// normalize-css()
 body 
     body-font()
     position-center()
@@ -23,9 +36,19 @@ body
     min-height: 100vh;
     background-color var(--color-background)
     color var(--color-text)
-    animation_ion()
-    .btn__switch-mode
+    .box
+        animation_ion()
+    .buttons_section
+        buttons_section(100)
+    &:is(.dark-style) button:hover
+        color var(--color-text)
+    .btn__switch-mode,
+    .btn__switch-shades_of_color
         buttons_style()
+    .btn__switch-mode
+        top 3%
+    .btn__switch-shades_of_color
+        top 15%
     .box
         position: relative;
         background-color var(--color-background)

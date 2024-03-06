@@ -1,6 +1,6 @@
 "use strict";
 
-const btn_switch_mode = document.querySelector(".btn__switch-mode");
+const btn_switch_theme = document.querySelector(".btn__switch-mode");
 const btn_switch_shades = document.querySelector(
   ".btn__switch-shades_of_color"
 );
@@ -10,33 +10,43 @@ const boxes = Array.from(
 
 const body = document.body;
 
+const localStorageSetElement = (
+  classList,
+  className = "",
+  key = "",
+  other_value = ""
+) => {
+  if (classList.contains(className)) {
+    localStorage.setItem(key, className);
+  } else {
+    localStorage.setItem(key, other_value);
+  }
+};
+
+const switchMode = (
+  elementClasses,
+  btn,
+  tog1 = "",
+  tog2 = "",
+  keyLocalStorage = ""
+) => {
+  elementClasses.toggle(tog1);
+  elementClasses.toggle(tog2);
+  btn.innerText = elementClasses.contains(tog1) ? tog2 : tog1;
+  localStorageSetElement(elementClasses, tog1, keyLocalStorage, tog2);
+};
+
 const shades_mode = () => {
-  body.classList.toggle("warm");
-  body.classList.toggle("cool");
-  btn_switch_shades.innerText = body.classList.contains("cool") ? "warm" : "cool";
+  switchMode(body.classList, btn_switch_shades, "warm", "cool", "shades-mode");
+};
 
-  if (body.classList.contains("warm")) {
-    localStorage.setItem("shades-mode","warm");
-  } else {
-    localStorage.setItem("shades-mode","")
-  }
-}
+const dark_mode = () => {
+  switchMode(body.classList, btn_switch_theme, "dark", "light", "theme-mode");
+};
 
-
-const dark_mode = (_e, btn = btn_switch_mode, main = body, arr = boxes) => {
-  const main_classes = main.classList;
-  main_classes.toggle("dark-style");
-  btn.innerText = main_classes.contains("dark-style") ? "light" : "dark";
-
-  if (main_classes.contains("dark-style")) {
-    localStorage.setItem("dark-mode", "dark-style");
-  } else {
-    localStorage.setItem("dark-mode", "");
-  }
-
-
+const new_title = (_e,arr = boxes, className = "active") => {
   arr.forEach((el) => {
-    el.classList.toggle("active");
+    el.classList.toggle(className);
   });
 };
 
@@ -48,14 +58,16 @@ const colorMediaIsDark = () => {
   );
 };
 
-if (localStorage.getItem("dark-mode") || colorMediaIsDark()) {
-  dark_mode();
-}
+// if (localStorage.getItem("dark-mode") || colorMediaIsDark()) {
+//   dark_mode();
+//   console.log("Dark mode");
+// }
 
-if (localStorage.getItem("shades-mode")) {
-  shades_mode();
-}
+// if (localStorage.getItem("shades-mode")) {
+//   shades_mode();
+//   console.log("Shades mode");
+// }
 
-btn_switch_mode.addEventListener("click", dark_mode);
-btn_switch_shades.addEventListener("click", shades_mode)
-
+btn_switch_theme.addEventListener("click", dark_mode);
+btn_switch_theme.addEventListener("click", new_title);
+btn_switch_shades.addEventListener("click", shades_mode);

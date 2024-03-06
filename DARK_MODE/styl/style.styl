@@ -11,7 +11,7 @@ body:is(.warm)
     --color-ion-1 #ddc5a2
     --color-ion-2 #F0D6AB
 
-.dark-style:is(.warm)
+.dark:is(.warm)
     --color-background #523634
     --color-border #301b28
     --color-text #FCEBCC
@@ -23,7 +23,7 @@ body:is(.cool)
     --color-ion-1 #d5d6d2
     --color-ion-2 #fff
 
-.dark-style:is(.cool)
+.dark:is(.cool)
     --color-background #3a5199
     --color-border #2f2e33
     --color-text #ffffff
@@ -40,7 +40,7 @@ body
         animation_ion()
     .buttons_section
         buttons_section(100)
-    &:is(.dark-style) button:hover
+    &:is(.dark) button:hover
         color var(--color-text)
     .btn__switch-mode,
     .btn__switch-shades_of_color

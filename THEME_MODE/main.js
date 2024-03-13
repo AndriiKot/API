@@ -49,7 +49,6 @@ const newTextTitle = (arr) => () => {
   toggleElements(null, arr);
 };
 
-
 installStylesLocalStorage(
   bodyClasses,
   'dark',
